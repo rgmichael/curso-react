@@ -1,0 +1,1 @@
+export { default as upperPrimeiraLetra } from './upperPrimeiraLetra'
