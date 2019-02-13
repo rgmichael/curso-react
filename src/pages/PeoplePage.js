@@ -5,7 +5,7 @@ import ListaContatos from '../components/ListaContatos';
 
 import axios from 'axios';
 
-export default class ContatoPage extends React.Component {
+export default class PeoplePage extends React.Component {
 
   constructor(props){
       super(props);
@@ -17,7 +17,7 @@ export default class ContatoPage extends React.Component {
 
   componentDidMount(){
       axios
-          .get('https://randomuser.me/api/?nat=br&results=5')
+          .get('https://randomuser.me/api/?nat=br&results=20')
           .then(response => {
                 const { results } = response.data;
                 this.setState({

@@ -3,7 +3,7 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 import { upperPrimeiraLetra } from '../util';
 import Line from '../components/Line';
 
-export default class ContatoDetalhePage extends React.Component {
+export default class PeopleDetailPage extends React.Component {
 
     static navigationOptions = ({navigation}) => {
         const peopleName = upperPrimeiraLetra(navigation.state.params.people.name.first)
@@ -31,7 +31,8 @@ export default class ContatoDetalhePage extends React.Component {
             <Line label="Estado:" content={ people.location.state }></Line>
             <Line label="Tel:" content={ people.phone }></Line>
             <Line label="Cel:" content={ people.cell }></Line>
-            <Line label="Nat:" content={ people.nat }></Line>
+            <Line label="Nacionalidade:" content={ people.nat }></Line>
+            <Line label="Profissão:" content={ people.job }></Line>
         </View>   
       </View>
     ); 

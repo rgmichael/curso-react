@@ -1,11 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-const Line = ({ label, content }) => {
+const Line = ({ label = "", content = "-" }) => {
    return(
         <View style={styles.line} >
-            <Text style={[styles.cell,styles.label]}> { label } </Text>
-            <Text style={[styles.cell]}>{ content } </Text>
+            <Text style={[
+                styles.cell, 
+                styles.label,
+                label.length > 8 ? styles.longLabel : null
+                ]}> { label } </Text>
+            <Text style={[styles.cell, styles.content]}> { content } </Text>
         </View>
     );  
 }
@@ -18,13 +22,21 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#c5c5c5',
       },   
-      cell: {
+    cell: {
         fontSize: 18,
         paddingLeft: 5,
      },
       label: {
         fontWeight: 'bold',
-     }  
+        flex: 1,
+     }, 
+     content: {
+        flex: 3,
+     },
+     longLabel: {
+        fontSize: 15,
+     },
+
   });
 
 export default Line;

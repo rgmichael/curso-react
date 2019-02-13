@@ -1,11 +1,11 @@
 import { createAppContainer, createStackNavigator} from 'react-navigation';
 
-import ContatoPage from './src/pages/ContatoPage';
-import ContatoDetalhePage from './src/pages/ContatoDetalhePage';
+import PeoplePage from './src/pages/PeoplePage';
+import PeopleDetailPage from './src/pages/PeopleDetailPage';
 
 const AppNavigator = createStackNavigator({
-      Main: ContatoPage,
-      ContatoDetalhe: ContatoDetalhePage
+      Main: PeoplePage,
+      ContatoDetalhe: PeopleDetailPage
 }, {
     defaultNavigationOptions:{
         title: 'Contatos',
